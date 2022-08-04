@@ -8,3 +8,7 @@ def home(request):
     images = logo.objects.all()
         
     return render(request,'home.html', {'images':images})
+
+def login(request):
+
+    return render(request, 'login.html')

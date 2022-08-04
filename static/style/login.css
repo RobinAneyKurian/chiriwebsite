@@ -1,0 +1,41 @@
+.nav-bg-color{
+    background: linear-gradient(to right, #4e0136 10%, #290321); 
+    border-color:  rgb(31, 1, 22);
+}
+
+li:hover{
+    background-color: rgb(36, 1, 37);
+    border-radius: 10px;
+}
+
+.nav-link{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.login_page_box{
+    background: linear-gradient(to right, #a5036f 10%, #440035); 
+    padding-top: 2%;
+    text-align: center;
+    border-color:  rgb(61, 2, 43);
+    box-shadow: 8px 8px rgb(46, 0, 32);
+    margin:12%;
+    margin-left:25%;
+    width:60%;
+}
+
+.login_button{
+    width:60%;
+    height:35%; 
+    background: linear-gradient(to right, #5a023d 10%, #7c0262); 
+    color: aliceblue;
+    margin:2%;
+    border-color:  rgb(139, 2, 98);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+

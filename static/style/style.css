@@ -1,5 +1,7 @@
+
+
 .chiri_home_bgcolor{
-    background-color: rgb(1, 20, 29);
+    background: linear-gradient(to right, #520237 10%, #440035);
 
     padding: 2px;
 }
@@ -15,6 +17,8 @@ li{
     margin-left:5%;
 }
 
-.carousel{
-    height:50%;
-}
+
+
+
+
+

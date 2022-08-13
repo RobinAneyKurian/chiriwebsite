@@ -18,12 +18,12 @@
     <div>
         <ul>
             <li><h1 style="font-weight:bold;">CHIR!</h1></li>
-            {% for i in images %}
-            <img class="m-3" src="{{i.logo_img.url}}" alt="">
+            {% for i in img %}
+            <img class="m-3" src="{{i.image.url}}" alt="">
             {% endfor %}
-            <li><a style="color:white" href="#">Home</a></li>
+            <li><a style="color:white" href="home">Home</a></li>
             <li><a style="color:white" href="login">login</a></li>
-            <li><a style="color:white" href="#">Register</a></li>
+            <li><a style="color:white" href="accounts/register">Register</a></li>
         </ul>
     </div>
 

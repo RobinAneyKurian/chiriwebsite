@@ -13,20 +13,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
+<style>
+  .daily_quotes {
+    font-weight: bold;
+    position: relative;
+    animation: mymove 3s infinite;
+    color:#fafaf4;
+    margin-left: 5px;
+  }
+  
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 150px;}
+  }
+
+</style>
 <body>
     <ul class="nav justify-content-start p-3 m-3 nav-bg-color">
-        <li><h1 style="font-weight:bold; color:white;">CHIR!</h1></li>
-        <li><p>Laugh ncrease your life age!</p></li>
-            {% for i in images %}
-            <img class="m-3" src="{{i.logo_img.url}}" alt="">
-            {% endfor %}
+        <li><h1><a style="font-weight:bold; color:white; text-decoration:none;" href="{% url 'home' %}">CHIR!</a></h1></li>
+        
+        
+        <h2 class="daily_quotes" style="color:white">{{quotes.logo}}</h2>
+        
         </ul>
         <ul class="nav justify-content-center nav-bg-color p-2">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" style="color:rgb(252, 248, 251)" href="#">Welcome to CHIR!</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color:rgb(252, 248, 251);" href="">Home</a>
+          <a class="nav-link" style="color:rgb(252, 248, 251);" href="{% url 'home' %}">Home</a>
         </li>
     </ul>
 

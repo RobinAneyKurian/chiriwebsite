@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-from .models import logo, quotes, Logoimage, Dailyquotes
+from .models import logo, quotes, Logoimage, Dailyquotes, Videolink, Addsimage, Engmemes
 from django.contrib import messages
 
 # Create your views here.
@@ -10,58 +10,23 @@ def home(request):
         
     return render(request,'home.html', {'img': img})
 
-def register(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
+def malayalam(request):
 
-        if password1 == password2:
-            if User.objects.filter(username=username).exists():
-                messages.info(request, "Username Exists")
-                return redirect('register')
-            elif User.objects.filter(email=email).exists():
-                messages.info(request, "Email Taken")
-                return redirect('register')
-            else:  
-                user = User.objects.create_user(username=username, password1 = password1, password2=password2, first_name=first_name, last_name=last_name)
-                user.save();
-                print("User created")
-                
+        return render(request,'malayalam.html')
 
-        else:
-            messages.info(request, "password not matching")
-            return redirect('register')
+def english(request):
 
-        return redirect('/')
+    engvideo = Videolink.objects.all()
+    adds = Addsimage.objects.all()
+    
 
-    else:
-        return render(request,'register.html')
+    return render(request, 'english.html', {"engvideo": engvideo, "adds": adds})
 
+def englishmemes(request):
 
-# def register(request):
+    engmemes = Engmemes.objects.all()
 
-#     if request.method == 'POST':
-#         first_name = request.POST['first_name']
-#         last_name = request.POST['last_name']
-#         username = request.POST['username']
-#         password1 = request.POST['password1']
-#         password2 = request.POST['password2']
-
-#         if password1 == password2:
-#             user = User.objects.create_user(username=username, password1 = password1, password2=password2, first_name=first_name, last_name=last_name)
-#             user.save();
-#             print('user created')
-#             return redirect('/')
-#     else:
-#         print('Password not matching')
-#     return render(request, 'register.html')
-
-def login(request):
-
-    return render(request, 'login.html')
+    return render(request, 'englishmemes.html', {"engmemes": engmemes} )
 
 def base(request):
 

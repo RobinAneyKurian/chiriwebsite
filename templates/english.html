@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<ul class="nav justify-content-center nav-bg-color p-2">
+    <li class="nav-item">
+        <a class="nav-link" style="color:rgb(252, 248, 251);" href="{% url 'english' %}">Videos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" style="color:rgb(252, 248, 251);" href="{% url 'englishmemes' %}">Memes</a>
+    </li>
+</ul>
+
+
+<div class="d-flex flex-row">
+<div style="width:30%; height:50%; color:green;"> 
+    
+
+    <div class="d-flex fex-column">
+    <div class="" style="width: 50%; height:40%;">
+        {% for add in adds %}
+        <div class="card-body mb-5 mt-5" style="margin-bottom:30%;"> 
+            
+          <img src="{{add.addimages.url}}" alt="..." style="width:200%; height:60vh;"/>
+        
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    
+
+      
+
+</div class='d-flex flex-column'>
+<div style="width:30%; height:50%; color:green;"> 
+    {% for video1 in engvideo %}
+
+<div class="english_videos text-center mx-3 my-3 ml-auto" style="margin-left:20%">
+    <div class="embed-responsive embed-responsive-21by9" style="width: 170%; height: 80vh;  display:inline-block;  margin:5%;">
+        <iframe class="embed-responsive-item" src="{{video1.vdolink}}"></iframe>
+    </div>
+  </div>
+
+{% endfor %}
+
+</div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+  */https://www.youtube.com/embed/IxG3Cv5qK00/*
+
+
+
+
+
+{% endblock %}
+
+
